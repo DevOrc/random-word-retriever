@@ -110,7 +110,7 @@ public class WordRetriever {
 			home = webClient.getPage("https://randomword.com/");
 			HtmlDivision randomWord = (HtmlDivision) home.getElementById("random_word");
 			HtmlDivision def = (HtmlDivision) home.getElementById("random_word_definition");
-			String wordDef = randomWord.asText() + ": " + def.asText() + "\n";
+			String wordDef = randomWord.asText() + ": " + def.asText();
 			System.out.println(wordDef);
 			pr.write(wordDef + "\n");
 			pr.flush();
